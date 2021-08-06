@@ -15,14 +15,14 @@ public class StringAddCalculator {
         int result = ZERO;
 
         for (String number : converter.parseNumber(textValue)) {
-            result += inNegative(Integer.parseInt(number));
+            result += checkNegative(Integer.parseInt(number));
         }
 
         return result;
     }
 
 
-    private static int inNegative(int num) {
+    private static int checkNegative(int num) {
         if (num < 0) {
             throw new RuntimeException();
         }
